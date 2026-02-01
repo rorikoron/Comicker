@@ -115,7 +115,7 @@ export const MergeView = () => {
                 item.type === 'Blank' ? { type: 'Blank' } : { type: 'Image', path: item.path }
             );
 
-            const _ = await invoke<string>('merge_to_pdf', {
+            await invoke<string>('merge_to_pdf', {
                 items: backendItems,
                 outputDir: selectedPath
             });
