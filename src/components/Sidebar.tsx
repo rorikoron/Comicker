@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Scissors, FileDigit } from 'lucide-react';
+import { Scissors, FileDigit, Link2, Mail } from 'lucide-react';
 
 
 export const Sidebar = () => {
@@ -37,6 +37,18 @@ export const Sidebar = () => {
                         <span>{item.label}</span>
                     </Link>
                 ))}
+            </div>
+
+            {/* contact link and email */}
+            <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-[#333333] cursor-pointer px-4 py-2 rounded-lg transition-all duration-200 w-fit">
+                    <Link2 size={12} />
+                    <a href="https://x.com/rorikoron__game" className='text-sm text-main'>Twitter</a>
+                </div>
+                <div className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-[#333333] cursor-pointer px-4 py-2 rounded-lg transition-all duration-200 w-fit">
+                    <Mail size={12} />
+                    <a href="mailto:rorikoron@gmail.com?subject=ComickerContact" className='text-sm text-main'>rorikoron@gmail.com</a>
+                </div>
             </div>
 
             {/* Dark Mode Toggle */}
